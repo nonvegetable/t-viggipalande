@@ -1,0 +1,6 @@
+.git
+.github
+.env
+.ssh/
+portfolio
+*.exe
