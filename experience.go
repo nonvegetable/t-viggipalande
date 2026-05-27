@@ -13,10 +13,10 @@ type Experience struct {
 }
 
 var experienceList = []Experience{
-	{Title: "Technical Consultant Intern • Axe Finance", Meta: "Jan 2026 - Present", Description: "Worked on enterprise migration flows, API validation, ERP integration, and documentation. Kept legacy systems moving without drama."},
-	{Title: "Software Developer Intern • Hindalco Industries", Meta: "May 2025 - Jul 2025", Description: "Built Oracle PL/SQL procedures and supported blockchain integration. Tightened backend logic and data handling."},
-	{Title: "Frontend Developer Intern • KJSCE", Meta: "Jul 2024 - Dec 2024", Description: "Built the Minors-Honors and Open-Elective portals. Improved navigation, reduced friction, and shipped cleaner flows."},
-	{Title: "Digital Marketing Intern • KJSCE", Meta: "Jun 2023 - Jul 2024", Description: "Created 120+ posts across social platforms. Learned consistency, iteration, and how small improvements add up."},
+	{Title: "Technical Consultant Intern\nAxe Finance", Meta: "Jan 2026 - Present", Description: "Worked on enterprise migration flows, API validation, ERP integration, and documentation. Kept legacy systems moving without drama."},
+	{Title: "Software Developer Intern\nHindalco Industries", Meta: "May 2025 - Jul 2025", Description: "Built Oracle PL/SQL procedures and supported blockchain integration. Tightened backend logic and data handling."},
+	{Title: "Frontend Developer Intern\nKJSCE", Meta: "Jul 2024 - Dec 2024", Description: "Built the Minors-Honors and Open-Elective portals. Improved navigation, reduced friction, and shipped cleaner flows."},
+	{Title: "Digital Marketing Intern\nKJSCE", Meta: "Jun 2023 - Jul 2024", Description: "Created 120+ posts across social platforms. Learned consistency, iteration, and how small improvements add up."},
 }
 
 func getExperienceView(m Model, width, height int) string {
@@ -25,10 +25,10 @@ func getExperienceView(m Model, width, height int) string {
 		Height(height)
 
 	boldStyle := m.renderer.NewStyle().
-		Foreground(m.theme.primary).
+		Foreground(m.theme.secondary).
 		Bold(true)
 	metaStyle := m.renderer.NewStyle().
-		Foreground(m.theme.secondary)
+		Foreground(m.theme.foregroundMuted)
 
 	usableHeight := height - 2
 	usableWidth := width - 6
