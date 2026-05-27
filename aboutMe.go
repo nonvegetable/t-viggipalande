@@ -16,7 +16,7 @@ var aboutItems = []AboutItem{
 	{Title: "Always Learning", Desc: "Learns by building. Keeps the cycle honest: try, break, fix, improve."},
 	{Title: "Football Mindset", Desc: "Football taught discipline, pressure, and how to stay calm when the plan changes mid-match."},
 	{Title: "Curious by Default", Desc: "Interested in geography, systems, and the patterns that show up before they become obvious."},
-	{Title: "Pattern Thinking", Desc: "Likes finding structure in messy problems. Usually before coffee. Not always by much."},
+	{Title: "Pattern Thinking", Desc: "Likes finding structure in messy problems."},
 	{Title: "Built to Improve", Desc: "Not trying to be loud. Just better than the last version."},
 }
 

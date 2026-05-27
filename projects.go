@@ -13,7 +13,7 @@ type Project struct {
 }
 
 var projects = []Project{{
-	name:        "ModNotes Memo\nMod Decision Documentation Tool",
+	name:        createHyperlink("https://developers.reddit.com/apps/mod-notes-memo","ModNotes Memo") + "\nMod Decision Documentation Tool",
 	description: "Production-ready Devvit app for Reddit moderators to attach private notes. Built full-stack architecture using Hono, Redis, and React + TypeScript.",
 	tools:       []string{"React", "TypeScript", "Redis", "Hono", "Devvit"},
 }, {
@@ -21,11 +21,11 @@ var projects = []Project{{
 	description: "Full-stack asset transfer platform using Spring Boot and React. Implemented a custom blockchain in Java with designed transactions and ledger validation.",
 	tools:       []string{"Java", "Spring Boot", "React.js"},
 }, {
-	name:        "Formula Genie\nAI-Powered Formula Extraction",
+	name:        createHyperlink("https://formula-genie-main.vercel.app/", "AI-Powered Formula Extraction") + "\nMath Formula Extraction Tool",
 	description: "Full-stack application using React, TypeScript, Supabase, and Gemini API to extract mathematical formulas. Integrated Razorpay.",
 	tools:       []string{"React", "TypeScript", "Supabase", "Gemini API", "Razorpay"},
 }, {
-	name:        "PokéGuess\nPokémon Wordle",
+	name:        createHyperlink("https://pokemon-wordle-murex.vercel.app/", "Pokémon Wordle") + "\nPokemon-Themed Wordle Game",
 	description: "Wordle-style guessing game with a Python Flask backend and React frontend. Implemented fuzzy matching to handle user input.",
 	tools:       []string{"React.js", "Python", "Flask", "REST APIs"},
 }}

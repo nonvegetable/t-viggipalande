@@ -6,11 +6,11 @@ func getContactView(m Model, width, height int) string {
 
 	content += "Feel free to reach out via any of the links below!\n\n"
 
-	content += "\n" + createHyperlink("mailto:pvighnesh81203@gmail.com", "Email") + " | " +
-		createHyperlink("https://viggipalande.live", "Website") + " | " +
+	content += "\n" + createHyperlink("https://viggipalande.live", "Website") + " | " +
 		createHyperlink("https://www.linkedin.com/in/vighnesh-palande/", "LinkedIn") + " | " +
 		createHyperlink("https://github.com/nonvegetable", "GitHub") + " | " +
-		createHyperlink("https://drive.google.com/file/d/1Tzh-pc6sZeDywWG6QVOvirKNhLphOgwV/view?usp=sharing", "Resume")
+		createHyperlink("https://drive.google.com/file/d/1kJOZ6APK3pnV5tbTCbwfvAQuI7LbOOTv/view?usp=sharing", "Resume") + 
+		"\n\nOr email me at: " + createHyperlink("mailto:pvighnesh81203@gmail.com", "pvighnesh81203@gmail.com")
 
 	// Render the content with the theme and dimensions
 	container := m.renderer.NewStyle().

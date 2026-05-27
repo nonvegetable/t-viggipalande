@@ -16,14 +16,18 @@ FROM alpine:latest
 
 WORKDIR /app
 
-# Copy the built binary
-COPY --from=builder /app/portfolio .
-
 # Expose the port your SSH server runs on
 EXPOSE 23234
 
 # Ensure the app can write its generated SSH keys inside the container
 RUN mkdir -p /app/.ssh
 
-# Run the app
+# Install openssh-client so that the ssh-keygen utility is available
+RUN apk add --no-cache openssh-client
+
+# Generate a static ED25519 host key file with no passphrase
+RUN ssh-keygen -t ed25519 -f /app/.ssh/id_ed25519 -N ""
+
+# Copy your built binary and run it
+COPY --from=builder /app/portfolio .
 CMD ["./portfolio"]
