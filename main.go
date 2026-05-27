@@ -13,10 +13,7 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/charmbracelet/ssh"
 	"github.com/charmbracelet/wish"
-	"github.com/charmbracelet/wish/activeterm"
 	"github.com/charmbracelet/wish/bubbletea"
-	"github.com/charmbracelet/wish/logging"
-	"github.com/charmbracelet/wish/recover"
 	"github.com/joho/godotenv"
 )
 
@@ -40,19 +37,12 @@ func main() {
 	s, err := wish.NewServer(
 		wish.WithAddress(net.JoinHostPort(host, port)),
 		wish.WithHostKeyPath(".ssh/id_ed25519"),
-		wish.WithMiddleware(
-			recover.Middleware(
-				bubbletea.Middleware(teaHandler),
-				activeterm.Middleware(),
-				logging.Middleware(),
-			),
-		),
 	)
 
 	if err != nil {
 		log.Error("Could not start server", "error", err)
+		os.Exit(1)
 	}
-
 	done := make(chan os.Signal, 1)
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 	log.Info("Starting SSH server", "host", host, "port", port)
