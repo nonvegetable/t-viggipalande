@@ -79,10 +79,6 @@ func getSkillsView(m Model, width, height int) string {
 		Width(width).
 		Height(height)
 
-	boldStyle := m.renderer.NewStyle().
-		Foreground(m.theme.primary).
-		Bold(true)
-
 	usableHeight := height - 2
 	usableWidth := width - 6
 
@@ -101,10 +97,10 @@ func getSkillsView(m Model, width, height int) string {
 				tools = append(tools, toolStyle.Render(tool.Name))
 			}
 		}
-		toolsSections = append(toolsSections, "## "+section.Title+"\n"+wrapAndJoin(tools, usableWidth)+"\n")
+		toolsSections = append(toolsSections, m.renderer.NewStyle().Foreground(m.theme.secondary).Bold(true).Render(section.Title)+"\n"+wrapAndJoin(tools, usableWidth)+"\n")
 	}
 
-	skillsText := boldStyle.Render("# Tools & Technologies") + "\n\n" +
+	skillsText := m.renderer.NewStyle().Foreground(m.theme.primary).Bold(true).MarginBottom(1).Render("Tools & Technologies") + "\n" +
 		lipgloss.JoinVertical(lipgloss.Left, toolsSections...)
 
 	skillsContent := m.renderer.NewStyle().

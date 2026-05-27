@@ -1,26 +1,15 @@
 package main
 
-import (
-	"github.com/charmbracelet/huh"
-	"github.com/charmbracelet/lipgloss"
-)
+import ()
 
 func getContactView(m Model, width, height int) string {
-	boldStyle := m.renderer.NewStyle().
-		Foreground(m.theme.primary).
-		Bold(true)
 
-	content := boldStyle.Render("# Contact Me") + "\n\n"
+	content := m.renderer.NewStyle().Foreground(m.theme.primary).Bold(true).MarginBottom(1).Render("Contact") + "\n"
 
-	if m.contactForm.State == huh.StateCompleted {
-		content += m.renderer.Place(width, 11, lipgloss.Center, lipgloss.Center, "Thank you for your message! I will get back to you soon.")
-	} else {
-		content += m.contactForm.WithWidth(width - 10).WithHeight(12).View()
-	}
-	content += "\n\nUse Tab to navigate."
+	content += "Feel free to reach out via any of the links below!\n\n"
 
 	content += "\n" + createHyperlink("mailto:pvighnesh81203@gmail.com", "Email") + " | " +
-		createHyperlink("https://github.com/nonvegetable", "GitHub") + " | " +
+		createHyperlink("https://viggipalande.live", "Website") + " | " +
 		createHyperlink("https://www.linkedin.com/in/vighnesh-palande/", "LinkedIn") + " | " +
 		createHyperlink("https://drive.google.com/file/d/1Tzh-pc6sZeDywWG6QVOvirKNhLphOgwV/view?usp=sharing", "Resume")
 

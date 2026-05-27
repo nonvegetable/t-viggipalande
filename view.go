@@ -10,8 +10,8 @@ func (m Model) View() string {
 	width := m.width
 	height := m.height
 
-	if width > 80 {
-		width = 80
+	if width > 120 {
+		width = 120
 	}
 	if height > 24 {
 		height = 24

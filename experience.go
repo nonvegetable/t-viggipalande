@@ -37,13 +37,13 @@ func getExperienceView(m Model, width, height int) string {
 	for _, exp := range experienceList {
 		expTitle := boldStyle.Render(exp.Title)
 		expMeta := metaStyle.Render(exp.Meta)
-		
+
 		expDesc := lipgloss.NewStyle().Width(usableWidth).Render(exp.Description)
-		
+
 		expSections = append(expSections, expTitle+"\n"+expMeta+"\n"+expDesc+"\n")
 	}
 
-	experienceText := boldStyle.Render("# Experience") + "\n\n" +
+	experienceText := m.renderer.NewStyle().Foreground(m.theme.primary).Bold(true).MarginBottom(1).Render("Experience") + "\n" +
 		lipgloss.JoinVertical(lipgloss.Left, expSections...)
 
 	experienceContent := m.renderer.NewStyle().
