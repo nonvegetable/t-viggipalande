@@ -13,21 +13,21 @@ type Project struct {
 }
 
 var projects = []Project{{
-	name:        "Formula Genie\nSaaS Platform",
-	description: "Problem: formula workflows were scattered. Built: a full-stack SaaS for generation, auth, payments, and usage tracking.",
-	tools:       []string{"AI", "React.js", "backend APIs", "Razorpay"},
+	name:        "ModNotes Memo\nMod Decision Documentation Tool",
+	description: "Production-ready Devvit app for Reddit moderators to attach private notes. Built full-stack architecture using Hono, Redis, and React + TypeScript.",
+	tools:       []string{"React", "TypeScript", "Redis", "Hono", "Devvit"},
+}, {
+	name:        "Blockchain Asset Transfer Platform\nCustom Blockchain",
+	description: "Full-stack asset transfer platform using Spring Boot and React. Implemented a custom blockchain in Java with designed transactions and ledger validation.",
+	tools:       []string{"Java", "Spring Boot", "React.js"},
+}, {
+	name:        "Formula Genie\nAI-Powered Formula Extraction",
+	description: "Full-stack application using React, TypeScript, Supabase, and Gemini API to extract mathematical formulas. Integrated Razorpay.",
+	tools:       []string{"React", "TypeScript", "Supabase", "Gemini API", "Razorpay"},
 }, {
 	name:        "PokéGuess\nPokémon Wordle",
-	description: "Problem: make daily guessing feel fair, quick, and a little annoying. Built: a Wordle-style game with progressive hints and fuzzy matching.",
-	tools:       []string{"React.js", "Python", "Flask"},
-}, {
-	name:        "FONO\nPhone Memory Game",
-	description: "Problem: make short-term memory training less boring. Built: a browser game for recalling phone numbers digit by digit.",
-	tools:       []string{"JavaScript", "HTML", "CSS"},
-}, {
-	name:        "Assero\nBlockchain Platform",
-	description: "Problem: manage assets with clearer ownership records. Built: Ethereum smart contracts for asset workflows.",
-	tools:       []string{"Java", "React.js"},
+	description: "Wordle-style guessing game with a Python Flask backend and React frontend. Implemented fuzzy matching to handle user input.",
+	tools:       []string{"React.js", "Python", "Flask", "REST APIs"},
 }}
 
 func getProjectsView(m Model, width, height int) string {

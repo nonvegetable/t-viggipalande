@@ -13,10 +13,13 @@ type Experience struct {
 }
 
 var experienceList = []Experience{
-	{Title: "Technical Consultant Intern\nAxe Finance", Meta: "Jan 2026 - Present", Description: "Worked on enterprise migration flows, API validation, ERP integration, and documentation. Kept legacy systems moving without drama."},
-	{Title: "Software Developer Intern\nHindalco Industries", Meta: "May 2025 - Jul 2025", Description: "Built Oracle PL/SQL procedures and supported blockchain integration. Tightened backend logic and data handling."},
-	{Title: "Frontend Developer Intern\nKJSCE", Meta: "Jul 2024 - Dec 2024", Description: "Built the Minors-Honors and Open-Elective portals. Improved navigation, reduced friction, and shipped cleaner flows."},
-	{Title: "Digital Marketing Intern\nKJSCE", Meta: "Jun 2023 - Jul 2024", Description: "Created 120+ posts across social platforms. Learned consistency, iteration, and how small improvements add up."},
+	{Title: "Technical Consultant Intern\nAxe Finance", Meta: "Jan 2026 - Present", Description: "Migrated client document templates to an internal engine. Developed and tested stored procedures for business validation rules."},
+	{Title: "Software Developer Intern\nHindalco Industries", Meta: "May 2025 - Jul 2025", Description: "Automated Scrap Receiving using Oracle PL/SQL. Contributed to workflows for lot ticket generation. Optimized multiple PL/SQL procedures."},
+	{Title: "Winner, Best in Category\nCodenovate 2024 Hackathon", Meta: "Nov 2024", Description: "Developed AIML software designed to determine genetic diseases based on analysis of a person’s DNA samples."},
+	{Title: "Frontend Developer Intern\nKJSCE", Meta: "Jul 2024 - Dec 2024", Description: "Built Minors-Honors and Open-Elective allotment software. Engineered 6 responsive pages with 20+ reusable components using React.js."},
+	{Title: "Top 6%\nNavonmesh 2.0 Hackathon", Meta: "Dec 2024", Description: "Optimized the DNA-based genetic disease detection software to improve accuracy and processing speed."},
+	{Title: "Finalist\nParul-Hackverse Hackathon", Meta: "Jan 2025", Description: "Built an IoT system integrating 3+ real-time sensors for automated farm water management."},
+	{Title: "Digital Marketing and Content Writer\nKJSCE", Meta: "Jun 2023 - Jul 2024", Description: "Authored and published 120+ posts across official college social media channels (Instagram, Facebook, LinkedIn)."},
 }
 
 func getExperienceView(m Model, width, height int) string {

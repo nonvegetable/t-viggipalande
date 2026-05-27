@@ -22,54 +22,39 @@ var toolsList = []Section{
 		Tools: []Tool{
 			{Name: "Java", URL: ""},
 			{Name: "Python", URL: ""},
-			{Name: "JavaScript", URL: ""},
-			{Name: "TypeScript", URL: ""},
-			{Name: "C", URL: ""},
-			{Name: "HTML", URL: ""},
-			{Name: "CSS", URL: ""},
+			{Name: "SQL", URL: ""},
 			{Name: "PL/SQL", URL: ""},
+			{Name: "JavaScript", URL: ""},
+			{Name: "HTML/CSS", URL: ""},
 		},
 	},
 	{
-		Title: "Frontend Frameworks",
+		Title: "Frameworks & Technologies",
 		Tools: []Tool{
 			{Name: "React.js", URL: ""},
-		},
-	},
-	{
-		Title: "Backend Technologies",
-		Tools: []Tool{
-			{Name: "Node.js", URL: ""},
-			{Name: "Express.js", URL: ""},
 			{Name: "Flask", URL: ""},
+			{Name: "Docker", URL: ""},
+			{Name: "Oracle E-Business Suite", URL: ""},
 		},
 	},
 	{
-		Title: "Database Systems",
+		Title: "Databases",
 		Tools: []Tool{
+			{Name: "Oracle Database", URL: ""},
+			{Name: "PostgreSQL", URL: ""},
 			{Name: "MySQL", URL: ""},
 			{Name: "MongoDB", URL: ""},
-			{Name: "PostgreSQL", URL: ""},
-			{Name: "Oracle", URL: ""},
+			{Name: "MS SQL Server", URL: ""},
 		},
 	},
 	{
-		Title: "Development Tools",
+		Title: "Developer Tools",
 		Tools: []Tool{
 			{Name: "Git", URL: ""},
 			{Name: "GitHub", URL: ""},
 			{Name: "VS Code", URL: ""},
-			{Name: "PyCharm", URL: ""},
-			{Name: "Docker", URL: ""},
-		},
-	},
-	{
-		Title: "Integration & APIs",
-		Tools: []Tool{
-			{Name: "REST APIs", URL: ""},
-			{Name: "Razorpay", URL: ""},
-			{Name: "Google APIs", URL: ""},
-			{Name: "Supabase", URL: ""},
+			{Name: "Linux", URL: ""},
+			{Name: "MS SQL Server Studio", URL: ""},
 		},
 	},
 }

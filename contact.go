@@ -1,7 +1,5 @@
 package main
 
-import ()
-
 func getContactView(m Model, width, height int) string {
 
 	content := m.renderer.NewStyle().Foreground(m.theme.primary).Bold(true).MarginBottom(1).Render("Contact") + "\n"
@@ -11,6 +9,7 @@ func getContactView(m Model, width, height int) string {
 	content += "\n" + createHyperlink("mailto:pvighnesh81203@gmail.com", "Email") + " | " +
 		createHyperlink("https://viggipalande.live", "Website") + " | " +
 		createHyperlink("https://www.linkedin.com/in/vighnesh-palande/", "LinkedIn") + " | " +
+		createHyperlink("https://github.com/nonvegetable", "GitHub") + " | " +
 		createHyperlink("https://drive.google.com/file/d/1Tzh-pc6sZeDywWG6QVOvirKNhLphOgwV/view?usp=sharing", "Resume")
 
 	// Render the content with the theme and dimensions
