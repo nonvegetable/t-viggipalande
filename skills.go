@@ -20,6 +20,7 @@ var toolsList = []Section{
 	{
 		Title: "Programming Languages",
 		Tools: []Tool{
+			{Name: "Go (Golang)", URL: ""},
 			{Name: "Java", URL: ""},
 			{Name: "Python", URL: ""},
 			{Name: "SQL", URL: ""},
@@ -34,6 +35,7 @@ var toolsList = []Section{
 			{Name: "React.js", URL: ""},
 			{Name: "Flask", URL: ""},
 			{Name: "Docker", URL: ""},
+			{Name: "Azure", URL: ""},
 			{Name: "Oracle E-Business Suite", URL: ""},
 		},
 	},
